@@ -1,4 +1,4 @@
-require('lua.lazy')
+require('config.lazy')
 require('plug-config.lspconfig')
 require('plug-config.cmp')
 require('plug-config.telescope')
@@ -11,5 +11,8 @@ vim.wo.number = true
 
 vim.keymap.set({ "n", "v"}, "<leader>by", '"+y', { desc = "Yank to clipboard" })
 vim.keymap.set({ "n", "v"}, "<leader>ba", '"+p', { desc = "Paste from clipboard" })
+vim.keymap.set({ "n", "v"}, "<C-b>", vim.lsp.buf.signature_help, { desc = "Open function signature" })
 
 vim.cmd.colorscheme('min-theme')
+
+

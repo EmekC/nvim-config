@@ -13,12 +13,11 @@ return {
 	     "hrsh7th/cmp-path",         -- path source
 	     "L3MON4D3/LuaSnip",         -- snippets
 	     "saadparwaiz1/cmp_luasnip", -- luasnip source
-	     "rafamadriz/friendly-snippets" -- preconfigured snippets
+	     "rafamadriz/friendly-snippets", -- preconfigured snippets
 		}
 	},
 	{
-	   'nvim-telescope/telescope.nvim', tag = '0.1.8',
-		dependencies = { 'nvim-lua/plenary.nvim' }
+	   'nvim-telescope/telescope.nvim',	dependencies = { 'nvim-lua/plenary.nvim' }
 	 },
 	{
 	   'nvim-lualine/lualine.nvim',
