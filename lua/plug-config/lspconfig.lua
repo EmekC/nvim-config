@@ -3,7 +3,11 @@ local lspconfig = require('lspconfig')
 lspconfig.lua_ls.setup({
 	settings = {
 		Lua = {
-			-- diagnostics = {"vim"},
+			diagnostics = {
+				disable = {
+					"trailing-space"
+				},
+			},
 			workspace = {
 				library = {
 					vim.fn.expand("$VIMRUNTIME/lua"),
@@ -20,3 +24,24 @@ vim.lsp.enable('lua_ls')
 
 lspconfig.clangd.setup({})
 
+
+lspconfig.rust_analyzer.setup({
+    settings = {
+        ["rust-analyzer"] = {
+            imports = {
+                granularity = {
+                    group = "module",
+                },
+                prefix = "self",
+            },
+            cargo = {
+                buildScripts = {
+                    enable = true,
+                },
+            },
+            procMacro = {
+                enable = true
+            },
+        }
+    }
+})
